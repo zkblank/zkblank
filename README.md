@@ -23,7 +23,7 @@
 
 <p align="center">
   <img alt="Chain" src="https://img.shields.io/badge/chain-Robinhood%20Chain%204663-0B0B0D?style=flat-square">
-  <img alt="Status" src="https://img.shields.io/badge/status-pre--launch-FF6A00?style=flat-square">
+  <img alt="Status" src="https://img.shields.io/badge/status-token%20live%20%C2%B7%20vault%20next-FF6A00?style=flat-square">
   <img alt="Proofs" src="https://img.shields.io/badge/proofs-Groth16%20%C2%B7%20Circom%202-F2F2EF?style=flat-square&labelColor=0B0B0D">
   <img alt="Ticker" src="https://img.shields.io/badge/ticker-%24ZKBLANK-FF6A00?style=flat-square&labelColor=0B0B0D">
 </p>
@@ -54,13 +54,13 @@ An observer sees that a blank bought a token and later sold it. An observer does
 
 ### Where it stands
 
-ZKBLANK is pre-launch, and the order is fixed: **contracts and circuits, then the 1,000-Hand Ceremony, then the vault, then $ZKBLANK.** The product goes live before the token does.
+**$ZKBLANK is live** on the Robinhood Chain launchpad. The vault is not yet, and the order from here is fixed: **contracts and circuits, then the 1,000-Hand Ceremony, then the vault.**
 
 | Works today at [app.zkblank.tech](https://app.zkblank.tech) | Opens after the ceremony |
 |---|---|
 | **Carbon copy check:** grade any wallet by what the chain already shows about it | **Dark Drop:** money in from any chain |
 | **Hand pre-registration:** reserve a place in the setup ceremony | **Burner Mode:** every buy from a fresh blank |
-| **Waitlist:** for traders, and for bot, wallet and agent builders | **Blanks, Crowd Meter, Crowd Fees, tiers** |
+| **$ZKBLANK:** live on the Robinhood Chain launchpad | **Blanks, Crowd Meter, Crowd Fees, tiers** |
 
 ![The app today: what already works and what opens after the ceremony](assets/app-vault.png)
 
@@ -75,7 +75,7 @@ Your browser makes a drop key that never leaves the device and predicts a **one-
 - **Swept by any keeper.** `sweep()` deploys the drop box, reads what arrived and computes the note commitment **on-chain** from the amount and your sealed key.
 - **Screened.** The association-set provider checks the deposit's source. Clean deposits join the approved set, usually within the hour.
 - **Private.** The chain knows a deposit happened. It never learns which later trade it pays for.
-- **Assets at launch:** ETH, WETH and USDG.
+- **Assets when the vault opens:** ETH, WETH and USDG.
 
 ![Dark Drop: deposit slip and the five steps](assets/dark-drop.png)
 
@@ -165,7 +165,7 @@ Zero-knowledge proofs need a one-time setup, and whoever keeps that setup's secr
 
 - **Contribute in your browser:** it downloads the latest key, adds fresh randomness, uploads the result and destroys its secret. About one to two minutes.
 - **Get a receipt:** your contribution hash and position (#1 to #1,000) go into the public transcript, which anyone can verify.
-- **Claim the Hand share:** 3% of supply, bought in the launch transaction at the opening price and split equally across verified Hands, claimable straight into a private note. Unclaimed shares burn after 60 days.
+- **Claim the Hand share:** 3% of supply, bought in the launch transaction at the opening price and split equally across verified Hands, claimable straight into a private note once the vault opens. Unclaimed shares burn 60 days after claims open.
 - **One Hand per GitHub or X account** older than 90 days. Contributions that fail the transcript check are struck from the record in public.
 
 Pre-registration is open now at [app.zkblank.tech/hands](https://app.zkblank.tech/hands).
@@ -253,7 +253,9 @@ Keys never leave the integrator's side. ZKBLANK sees proofs and public inputs on
 | Launch | 100% of supply on the Robinhood Chain launchpad curve, then graduation into a Uniswap pool, LP locked |
 | Hand share | 3%, bought in the launch transaction at the opening price |
 | Creator tax | 1%, to the FeeRouter |
-| Contract | To be announced. The token launches after the vault. |
+| Contract | [`0xE87637c0DA9Ba493be454Ed5E21fDFEd7a8fde66`](https://robin.etherscan.io/token/0xE87637c0DA9Ba493be454Ed5E21fDFEd7a8fde66) |
+
+![$ZKBLANK contract address on zkblank.tech](assets/ca.png)
 
 No emissions, no farm, no unlock schedule. Every buy and every burn traces back to a real trade through the vault.
 
